@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+:root { /*--nome: valor;*/
+    --color-1: #0e0c0c;
+    --color-2: #171717;
+    --color-3: #a8a29e;
+    --color-4: #f5f5f5;
+    --transition: all 0.4s;
+}
+
+/*---HEADER---*/
+
+header{
+    display: grid;
+    position: fixed;
+    top: 0px;
+    background-color: var(--color-2);
+    width: 100%;
+    grid-template-columns: 1fr 4fr;
+    justify-content: space-around;
+    padding: 0 10px;
+    z-index: 9999999;
+    transition: all 0.4s;
+}
+
+#logo{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-4);
+    
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    justify-content: right;
+    column-gap: 50px;
+    padding: 10px;
+}
+
+.item a{
+    text-decoration: none;
+    color: var(--color-3);
+    transition: var(--transition);
+}
+
+.item a:hover{
+    color: var(--color-4);
+}
+
+.button{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+.botao-gradient{
+    background: linear-gradient(var(--color-2), var(--color-2)) padding-box, linear-gradient(45deg,#1900a8, #ff05c9, #fd1937) border-box;
+    border-radius: 50em;
+    border: 2px solid transparent;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.botao-gradient:hover{
+    background: linear-gradient(var(--color-4), var(--color-4)) padding-box, linear-gradient(45deg,#1900a8, #ff05c9, #fd1937) border-box;
+}
+
+.button a:hover{
+    color: black;
+}
+
+header.onScroll {
+    opacity: 0.8;
+}
+
+/*---MAIN---*/
+
+
+main {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 10px;
+    width: 100%;
+    background-image: radial-gradient(var(--color-4), var(--color-3));
+}
+
+#produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#produtos .produto, #produtos a {
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s;
+}
+
+#produtos .produto:hover {
+    transform: scale(1.05);
+    z-index: 999;
+}
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    text-align: center;
+}
+.text, .text2{
+    color: black;
+    font-weight: bolder;
+    font-size: larger;
+    position: absolute;
+    margin-bottom: 40px;
+    z-index: 9999;
+}
+.text2{
+    color: var(--color-3);
+}
+
+.carrinho, .carrinho2 {
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.carrinho2 {
+    color: var(--color-3);
+}
+
+/*------FOOTER------*/
+
+footer {
+    width: 100%;
+    color: var(--color-4);
+}
+
+footer .content {
+    background-color: var(--color-2);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer-contacts h1{
+    margin-bottom: 0.75rem;
+}
+
+#socialmidia {
+    display: grid;
+    grid-template-columns: repeat(3, 0.2fr);
+    margin-top: 1.5rem;
+}
+
+#socialmidia .link {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-4);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+#socialmidia .link i {
+    font-size: 1.25rem;
+}
+
+#socialmidia .link:hover {
+    opacity: 0.8;
+}
+
+#insta {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#face {
+    background-color: #4267b3;
+}
+
+#whats {
+    background-color: #25d366;
+}
+
+#footer-list {
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+#footer-list a{
+    color: var(--color-3);
+    transition: all 0.4s;
+}
+
+#footer-list a:hover {
+    color: var(--color-4);
+}
+
+#footer-escrever {
+    display: grid;
+    gap: 1.5rem;
+}
+
+#footer-escrever p{
+    color: var(--color-3);
+}
+
+#grupoInput {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    background-color: var(--color-1);
+    border-radius: 4px;
+}
+
+#grupoInput input{
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+#grupoInput button {
+    background-color: beige;
+    border: none;
+    color: var(--color-1);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#grupoInput button:hover {
+    opacity: 0.8;
+}
+
+#direitos {
+    background-color: var(--color-1);
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
